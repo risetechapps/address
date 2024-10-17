@@ -18,7 +18,7 @@
     "require": {
         "php": "^8.1",
         "illuminate/support": "^9.0|^10.0",
-        "risetechapps/form-request": "^2.0",
+        "risetechapps/form-request": "^3.0",
         "risetechapps/repository": "^1.0",
         "risetechapps/to-upper": "^1.1"
     },
