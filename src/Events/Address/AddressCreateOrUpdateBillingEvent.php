@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class AddressCreateOrUpdateChargeEvent
+class AddressCreateOrUpdateBillingEvent
 {
     use Dispatchable;
 
@@ -37,6 +37,6 @@ class AddressCreateOrUpdateChargeEvent
      */
     public function broadcastOn(): Channel|PrivateChannel|array
     {
-        return new PrivateChannel('address-update-charge');
+        return new PrivateChannel('address-update-billing');
     }
 }

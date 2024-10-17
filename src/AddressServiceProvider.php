@@ -5,7 +5,7 @@ namespace RiseTech\Address;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 
-use RiseTech\Address\Events\Address\AddressCreateOrUpdateChargeEvent;
+use RiseTech\Address\Events\Address\AddressCreateOrUpdateBillingEvent;
 use RiseTech\Address\Events\Address\AddressCreateOrUpdateDefaultEvent;
 use RiseTech\Address\Events\Address\AddressCreateOrUpdateDeliveryEvent;
 use RiseTech\Address\Listeners;
@@ -21,7 +21,7 @@ class AddressServiceProvider extends ServiceProvider
 
         Event::listen(AddressCreateOrUpdateDefaultEvent::class, Listeners\AddressCreateOrUpdateDefaultListener::class);
         Event::listen(AddressCreateOrUpdateDeliveryEvent::class, Listeners\AddressCreateOrUpdateDeliveryListener::class);
-        Event::listen(AddressCreateOrUpdateChargeEvent::class, Listeners\AddressCreateOrUpdateChargeListener::class);
+        Event::listen(AddressCreateOrUpdateBillingEvent::class, Listeners\AddressCreateOrUpdateBillingListener::class);
     }
 
     /**

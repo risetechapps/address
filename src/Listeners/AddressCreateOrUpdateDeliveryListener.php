@@ -2,7 +2,7 @@
 
 namespace RiseTech\Address\Listeners;
 
-use RiseTech\Address\Events\Address\AddressCreateOrUpdateChargeEvent;
+use RiseTech\Address\Events\Address\AddressCreateOrUpdateDeliveryEvent;
 use RiseTech\Address\Model\Address as AddressModel;
 
 class AddressCreateOrUpdateDeliveryListener
@@ -11,7 +11,7 @@ class AddressCreateOrUpdateDeliveryListener
     {
     }
 
-    public function handle(AddressCreateOrUpdateChargeEvent $event): void
+    public function handle(AddressCreateOrUpdateDeliveryEvent $event): void
     {
 
         try {
