@@ -18,6 +18,6 @@ trait HasAddressDelivery
 
     public function addressDelivery(): HasMany
     {
-        return $this->hasMany(Address::class, 'address_id')->where('type', 'address_delivery');
+        return $this->hasMany(Address::class, 'address_id')->where('type', 'delivery');
     }
 }
